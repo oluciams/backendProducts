@@ -1,6 +1,13 @@
+require('dotenv').config();
 
-'use strict'
+require('./confg/dbConfig');
+const express = require('express');
+const app = express();
 
-/* eslint no-console: 'warn' */
-require('dontenv').config();
 
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
+
+
+
+app.listen(process.env.PORT || 3001, console.log(`running in port ${process.env.PORT || 3001}`))
