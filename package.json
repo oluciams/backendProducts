@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/",
     "lint--fix": "eslint src/ --fix",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node usersAuth/index.js",
+    "dev": "nodemon usersAuth/index.js"
   },
   "keywords": [],
   "author": "",
