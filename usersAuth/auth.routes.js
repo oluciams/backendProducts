@@ -10,7 +10,4 @@ router.post('/signup', validation(userSchema), createUser);
 
 router.post('/login', validation(loginSchema), loginUser);
 
-router.get('/logout', logOut);
-
-
 module.exports = router;

@@ -18,25 +18,16 @@ const loginUser = async (req, res)=>{
     const user = await User.authenticate({email, password});    
     if(user){       
       const token = jwt.sign({id: user._id}, process.env.SECRET);
-      res.status(200).json({token});      
+      res.status(200).json({token});         
     }else{
       res.status(400).json({message: 'invalid password or email'});
     }
-  } catch (error) {
-    res.status(400).json({error});
-  }
-}
-
-const logOut = (req, res)=>{
-  try {
-    res.status(200),json({message: 'logout user'});
-  } catch (error) {
-    res.status(400).json(error);
+  } catch (error) {    
+    res.status(400).json({error});  
   }
 }
 
 module.exports = {
   createUser,
-  loginUser,
-  logOut
+  loginUser
 }
