@@ -1,12 +1,12 @@
 require('dotenv').config();
 
-require('./confg/dbConfig');
+require('../confg/dbConfig');
 const express = require('express');
 const cors = require('cors');
 const app = express();
 const jwt = require('jsonwebtoken')
 
-const authRoutes = require('./routes/auth.routes');
+const authRoutes = require('./auth.routes');
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
