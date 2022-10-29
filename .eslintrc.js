@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     commonjs: true,
     es2021: true
-  },
+  }, 
   extends: [
     'standard',
     'prettier',
@@ -20,7 +20,5 @@ module.exports = {
     'prettier',
     'react'  
   ],
-  rules: {
-    'prettier/prettier': 'error'
-  }
+  rules: {}
 }
